@@ -18,8 +18,8 @@ samples, guidance on mobile development, and a full API reference.
 - Task 0 - 1/1 -------
 - Task 1 - 3/3 -------
 - Task 2 - 7/7 -------
-- Task 3 - 0/7
-- Task 4 - 0/2
+- Task 3 - 7/7 -------
+- Task 4 - 2/2 -------
 - Task 5 - 0/4
 - Task 6 - 0/8
 - Task 7 - 0/6
@@ -31,5 +31,5 @@ samples, guidance on mobile development, and a full API reference.
 - Task 13 - 0/7
 - Task 14 - 0/8
 - Task 15 - 0/7
-- Total - 11/95 = 11.572%
+- Total - 20/95 = 21.04%
 - 1.052%/point

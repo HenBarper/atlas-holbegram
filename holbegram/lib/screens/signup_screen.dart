@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:holbegram/screens/login_screen.dart';
 import 'package:holbegram/widgets/text_field.dart';
 
 class SignUp extends StatefulWidget {
@@ -25,7 +26,7 @@ class _SignUpState extends State<SignUp> {
   }
 
   @override
-  void InitState() {
+  void initState() {
     super.initState();
     _passwordVisible = true;
   }
@@ -51,27 +52,34 @@ class _SignUpState extends State<SignUp> {
               width: 80,
               height: 60,
             ),
+            Text(
+              'Sign up to see photos and videos from your friends.',
+              style: TextStyle(
+                fontFamily: 'Billabong',
+                fontSize: 24,
+              ),
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   SizedBox(height: 28),
                   TextFieldInput(
-                    controller: widget.emailController,
+                    controller: emailController,
                     isPassword: false,
                     hintText: 'Email',
                     keyboardType: TextInputType.emailAddress,
                   ),
                   SizedBox(height: 24),
                   TextFieldInput(
-                    controller: widget.usernameController,
+                    controller: usernameController,
                     isPassword: false,
                     hintText: 'Username',
                     keyboardType: TextInputType.text,
                   ),
                   SizedBox(height: 24),
                   TextFieldInput(
-                    controller: widget.passwordController,
+                    controller: passwordController,
                     isPassword: !_passwordVisible,
                     hintText: 'Password',
                     keyboardType: TextInputType.visiblePassword,
@@ -89,7 +97,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                   SizedBox(height: 24),
                   TextFieldInput(
-                    controller: widget.passwordConfirmController,
+                    controller: passwordConfirmController,
                     isPassword: !_passwordVisible,
                     hintText: 'Confirm Password',
                     keyboardType: TextInputType.visiblePassword,

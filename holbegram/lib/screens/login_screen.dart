@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holbegram/widgets/text_field.dart';
+import 'package:holbegram/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({ super.key });
@@ -21,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   @override
-  void InitState() {
+  void initState() {
     super.initState();
     _passwordVisible = true;
   }
@@ -53,14 +54,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   SizedBox(height: 28),
                   TextFieldInput(
-                    controller: widget.emailController,
+                    controller: emailController,
                     isPassword: false,
                     hintText: 'Email',
                     keyboardType: TextInputType.emailAddress,
                   ),
                   SizedBox(height: 24),
                   TextInputField(
-                    controller: widget.passwordController,
+                    controller: passwordController,
                     isPassword: !_passwordVisible,
                     hintText: 'Password',
                     keyboardType: TextInputType.visiblePassword,
@@ -117,17 +118,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Text("Don't have an account"),
                         TextButton(
-                          onPressed: () {
-                            // Add your sign-up logic here
-                          },
-                          child: Text(
-                            'Sign up',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(218, 226, 37, 24),
-                            ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SignUp(
+                              emailController: TextEditingController(),
+                              passwordController: TextEditingController(),
+                            )),
+                          );
+                        },
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(218, 226, 37, 24),
                           ),
                         ),
+                      ),
                       ],
                     ),
                   ),
